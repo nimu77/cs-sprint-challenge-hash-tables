@@ -4,8 +4,19 @@ def intersection(arrays):
     """
     # Your code here
 
-    return result
-
+    result = {}
+    
+    result_two = []
+    
+    for a in arrays:
+        for i in a:
+            if i in result:
+                if i in result_two:
+                    continue
+                if i not in result_two:
+                    result_two.append(i)
+            result[i] = a
+    return result_two
 
 if __name__ == "__main__":
     arrays = []
